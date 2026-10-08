@@ -1,0 +1,213 @@
+/* ============================================================
+   AI 游戏合集 —— 全局样式
+   深色底 + 高对比前景，与 Python 版保持一致的视觉语言
+   ============================================================ */
+
+:root {
+  --bg: #181a20;
+  --panel: #22252d;
+  --panel-hover: #2b2f39;
+  --grid: #2c303a;
+  --text: #e8eaf0;
+  --text-dim: #8c92a0;
+  --accent: #56b6ff;
+  --danger: #ff5c5c;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.screen {
+  display: none;
+  width: 100%;
+  max-width: 720px;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* ---------- 游戏大厅 ---------- */
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--text-dim);
+  font-size: 14px;
+}
+
+.game-list {
+  display: grid;
+  gap: 16px;
+}
+
+.game-card {
+  display: grid;
+  gap: 6px;
+  text-align: left;
+  padding: 22px 24px;
+  background: var(--panel);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+
+.game-card:hover {
+  background: var(--panel-hover);
+  border-color: var(--accent);
+}
+
+.game-card:active {
+  transform: scale(0.99);
+}
+
+.game-title {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.game-desc {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.game-best {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+.game-best b {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ---------- 游戏页 HUD ---------- */
+
+.hud {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.hud-title {
+  font-size: 16px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.hud-score {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.hud-score b {
+  color: var(--text);
+  font-size: 15px;
+}
+
+.btn {
+  padding: 8px 16px;
+  background: var(--panel);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn:hover {
+  background: var(--panel-hover);
+  border-color: var(--accent);
+}
+
+/* ---------- 画布区 ---------- */
+
+.stage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#canvas {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  background: var(--bg);
+  border-radius: var(--radius);
+  touch-action: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(24, 26, 32, 0.85);
+  border-radius: var(--radius);
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay-text {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--danger);
+}
+
+.overlay-hint {
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.controls {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+@media (max-width: 520px) {
+  h1 { font-size: 24px; }
+  .hud { gap: 10px; }
+  .hud-title { font-size: 14px; }
+}

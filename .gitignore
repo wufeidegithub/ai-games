@@ -1,0 +1,43 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+.ruff_cache/
+
+# ---------- 游戏构建产物 ----------
+build/
+dist/
+*.spec
+saves/
+*.sav
+highscore.json
+
+# ---------- 资源临时文件 ----------
+assets/**/*.psd
+assets/**/*.aseprite
+assets/**/*.xcf
+assets/**/*.tmp
+
+# ---------- 网页端 ----------
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.DS_Store
+dist-web/
+.parcel-cache/
+
+# ---------- 编辑器 ----------
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+
+# ---------- 系统 ----------
+Thumbs.db
+desktop.ini

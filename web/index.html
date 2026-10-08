@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 游戏合集</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 游戏大厅 -->
+  <main id="lobby" class="screen active">
+    <header>
+      <h1>AI 游戏合集</h1>
+      <p class="subtitle">方向键 / WASD 操作 · 手机端支持滑动</p>
+    </header>
+
+    <div class="game-list">
+      <button class="game-card" data-game="snake">
+        <span class="game-title">贪吃蛇</span>
+        <span class="game-desc">吃到食物变长，撞墙或咬到自己结束</span>
+        <span class="game-best">最高分 <b data-best="snake">0</b></span>
+      </button>
+
+      <button class="game-card" data-game="tetris">
+        <span class="game-title">俄罗斯方块</span>
+        <span class="game-desc">消行得分，堆到顶部就结束</span>
+        <span class="game-best">最高分 <b data-best="tetris">0</b></span>
+      </button>
+    </div>
+  </main>
+
+  <!-- 游戏页 -->
+  <main id="play" class="screen">
+    <div class="hud">
+      <button id="btn-back" class="btn">← 返回</button>
+      <span class="hud-title" id="hud-title"></span>
+      <span class="hud-score">得分 <b id="score">0</b></span>
+      <span class="hud-score">最高 <b id="best">0</b></span>
+      <button id="btn-pause" class="btn">暂停</button>
+    </div>
+
+    <div class="stage">
+      <canvas id="canvas" width="480" height="480"></canvas>
+      <div id="overlay" class="overlay hidden">
+        <p class="overlay-text" id="overlay-text"></p>
+        <p class="overlay-hint" id="overlay-hint">按 R 重开</p>
+      </div>
+    </div>
+
+    <p class="controls" id="controls"></p>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/snake.js"></script>
+  <script src="js/tetris.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
