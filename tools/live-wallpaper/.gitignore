@@ -1,0 +1,20 @@
+# 运行状态与缓存（自动生成）
+__pycache__/
+*.pyc
+live.pid
+live.log
+wallpaper.log
+state.json
+
+# 壁纸图片缓存（体积大，不入库）
+cache/
+
+# 备份
+_backup/
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

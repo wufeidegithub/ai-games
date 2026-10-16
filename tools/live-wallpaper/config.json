@@ -1,0 +1,15 @@
+{
+  "source": "bing",
+  "fallback_source": "picsum",
+  "bing_market": "zh-CN",
+  "bing_index": 0,
+  "folder": "",
+  "picsum_seed": "",
+  "width": 1920,
+  "height": 1080,
+  "style": "fill",
+  "gap": 0,
+  "task_name": "DailyWallpaper",
+  "task_time": "09:00",
+  "cache_keep_days": 30
+}
